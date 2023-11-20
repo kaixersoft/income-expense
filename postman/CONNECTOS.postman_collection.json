@@ -1,0 +1,966 @@
+{
+	"info": {
+		"_postman_id": "716a48bc-4e8a-4856-a144-8ec242837ea1",
+		"name": "CONNECTOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "689608"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add new Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Grocery\",\n    \"description\": \"Food, Drinks, Snacks, Toiletries\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "new category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Grocery\",\n    \"description\": \"Food, Drinks expenses\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"category"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12a-oBUx/8DUFK9DFrgINzmOYfCFlH8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 01:49:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-11-17T01:49:23.115Z\",\n    \"statusCode\": 201,\n    \"message\": \"Operation completed successfully\",\n    \"result\": {\n        \"name\": \"Grocery\",\n        \"description\": \"Food, Drinks expenses\",\n        \"createdAt\": \"2023-11-17T01:49:23.030Z\",\n        \"updatedAt\": \"2023-11-17T01:49:23.030Z\",\n        \"categoryId\": \"7901c261-05b6-4179-bd39-6743e68383de\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/category/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"category",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2888891c-e807-41d1-afd7-c0083de1f75a"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/category/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"category",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7901c261-05b6-4179-bd39-6743e68383de"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12a-FJulj0jdW7P8z17pHJgD3Da5sPY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 02:23:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-11-17T02:23:31.695Z\",\n    \"statusCode\": 200,\n    \"message\": \"Operation completed successfully\",\n    \"result\": {\n        \"createdAt\": \"2023-11-17T01:49:23.030Z\",\n        \"updatedAt\": \"2023-11-17T01:49:23.030Z\",\n        \"categoryId\": \"7901c261-05b6-4179-bd39-6743e68383de\",\n        \"name\": \"Grocery\",\n        \"description\": \"Food, Drinks expenses\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Monthly Salary\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/category/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"category",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1d62cd29-c3a2-434c-a573-8e71be3fc5c6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Monthly Salary\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/category/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"category",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1d62cd29-c3a2-434c-a573-8e71be3fc5c6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "298"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12a-+tIso3UwvrpHKAVAcgv6/oAyfrs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 02:47:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-11-17T02:47:14.492Z\",\n    \"statusCode\": 200,\n    \"message\": \"Operation completed successfully\",\n    \"result\": {\n        \"createdAt\": \"2023-11-17T02:33:53.687Z\",\n        \"updatedAt\": \"2023-11-17T02:47:14.492Z\",\n        \"categoryId\": \"1d62cd29-c3a2-434c-a573-8e71be3fc5c6\",\n        \"name\": \"Monthly Salary\",\n        \"description\": \"Monthly income\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "List Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"category"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"category"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "498"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f2-qRxraawY8hoaiE2/etwVoC4f0oQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 02:57:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-11-17T02:57:56.002Z\",\n    \"statusCode\": 200,\n    \"message\": \"Operation completed successfully\",\n    \"result\": [\n        {\n            \"createdAt\": \"2023-11-17T02:38:10.438Z\",\n            \"updatedAt\": \"2023-11-17T02:38:10.438Z\",\n            \"categoryId\": \"2888891c-e807-41d1-afd7-c0083de1f75a\",\n            \"name\": \"Grocery\",\n            \"description\": \"Food, Drinks, Snacks, Toiletries\"\n        },\n        {\n            \"createdAt\": \"2023-11-17T02:33:53.687Z\",\n            \"updatedAt\": \"2023-11-17T02:47:14.492Z\",\n            \"categoryId\": \"1d62cd29-c3a2-434c-a573-8e71be3fc5c6\",\n            \"name\": \"Monthly Salary\",\n            \"description\": \"Monthly income\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/category/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"category",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "68f0b164-113d-4ab2-8d39-07a2226a9ef5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/category/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"category",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "68f0b164-113d-4ab2-8d39-07a2226a9ef5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9a-d6zAAtvBrvFbVUIks2XzsDmTMjc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 03:11:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-11-17T03:11:15.677Z\",\n    \"statusCode\": 200,\n    \"message\": \"Operation completed successfully\",\n    \"result\": {\n        \"generatedMaps\": [],\n        \"raw\": [],\n        \"affected\": 1\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Add new Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountType\": \"income\",\n    \"amount\": 100000,\n    \"description\": \"November salary\",\n    \"date\": \"2020-11-17\",\n    \"categoryId\": \"42ffb605-39c0-42f3-8542-2198c8038860\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add new Account",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"accountType\": \"income\",\n    \"amount\": 130000,\n    \"description\": \"October salary\",\n    \"date\": \"2020-10-17\",\n    \"categoryId\": \"42ffb605-39c0-42f3-8542-2198c8038860\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"account"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "349"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15d-gDL3pCKtrYVnT95qggJy7vrJS68\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 07:15:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-11-17T07:15:41.682Z\",\n    \"statusCode\": 201,\n    \"message\": \"Operation completed successfully\",\n    \"result\": {\n        \"accountType\": \"income\",\n        \"amount\": 130000,\n        \"date\": \"2020-10-17\",\n        \"description\": \"October salary\",\n        \"deletedAt\": null,\n        \"createdAt\": \"2023-11-17T07:15:41.688Z\",\n        \"updatedAt\": \"2023-11-17T07:15:41.688Z\",\n        \"accountId\": \"5db64efb-93d8-48bb-a7a1-0fb62fa459d2\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/account/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"account",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "a46fc221-fca3-44e3-b158-4ee432458731"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Account",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/account/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"account",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "a46fc221-fca3-44e3-b158-4ee432458731"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "347"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15b-voNnL/etItXpVeIuHvB93O6Kols\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 07:08:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-11-17T07:08:54.390Z\",\n    \"statusCode\": 200,\n    \"message\": \"Operation completed successfully\",\n    \"result\": {\n        \"createdAt\": \"2023-11-17T07:07:54.675Z\",\n        \"updatedAt\": \"2023-11-17T07:07:54.675Z\",\n        \"accountId\": \"a46fc221-fca3-44e3-b158-4ee432458731\",\n        \"accountType\": \"income\",\n        \"amount\": 100000,\n        \"date\": \"2020-11-16T16:00:00.000Z\",\n        \"description\": \"November salary\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Salary for the month of November\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/account/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"account",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "a46fc221-fca3-44e3-b158-4ee432458731"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Account",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"Salary for the month of November\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/account/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"account",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "a46fc221-fca3-44e3-b158-4ee432458731"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "364"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16c-AfGvSu1yb7rfhu+HgHiufEosfLk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 07:12:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-11-17T07:12:51.830Z\",\n    \"statusCode\": 200,\n    \"message\": \"Operation completed successfully\",\n    \"result\": {\n        \"createdAt\": \"2023-11-17T07:07:54.675Z\",\n        \"updatedAt\": \"2023-11-17T07:12:51.823Z\",\n        \"accountId\": \"a46fc221-fca3-44e3-b158-4ee432458731\",\n        \"accountType\": \"income\",\n        \"amount\": 100000,\n        \"date\": \"2020-11-16T16:00:00.000Z\",\n        \"description\": \"Salary for the month of November\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "List Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"account"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Accounts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"account"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "601"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"259-dPiIRsVOxtQKVT0XhW4cxthok1U\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 07:15:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-11-17T07:15:45.472Z\",\n    \"statusCode\": 200,\n    \"message\": \"Operation completed successfully\",\n    \"result\": [\n        {\n            \"createdAt\": \"2023-11-17T07:07:54.675Z\",\n            \"updatedAt\": \"2023-11-17T07:12:51.823Z\",\n            \"accountId\": \"a46fc221-fca3-44e3-b158-4ee432458731\",\n            \"accountType\": \"income\",\n            \"amount\": 100000,\n            \"date\": \"2020-11-16T16:00:00.000Z\",\n            \"description\": \"Salary for the month of November\"\n        },\n        {\n            \"createdAt\": \"2023-11-17T07:15:41.688Z\",\n            \"updatedAt\": \"2023-11-17T07:15:41.688Z\",\n            \"accountId\": \"5db64efb-93d8-48bb-a7a1-0fb62fa459d2\",\n            \"accountType\": \"income\",\n            \"amount\": 130000,\n            \"date\": \"2020-10-16T16:00:00.000Z\",\n            \"description\": \"October salary\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/account/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"account",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1b2749f0-1466-4984-bdb1-94c5f713573f"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Account",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/account/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"account",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1b2749f0-1466-4984-bdb1-94c5f713573f"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9a-4hwJRYLti36kjh49HtFXpSa6CQE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Nov 2023 07:14:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-11-17T07:14:15.880Z\",\n    \"statusCode\": 200,\n    \"message\": \"Operation completed successfully\",\n    \"result\": {\n        \"generatedMaps\": [],\n        \"raw\": [],\n        \"affected\": 1\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
