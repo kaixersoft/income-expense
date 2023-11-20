@@ -1,0 +1,29 @@
+version: "3"
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: connectos
+    volumes:
+      - ./.docker/pg/data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  nginx:
+    build:
+      context: ./.docker/nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+
+  # backend:
+  #   build: ./backend
+  #   ports:
+  #     - "3000:3000"
+
+  # client:
+  #   build: ./client
+  #   ports:
+  #     - "3001:3001"
